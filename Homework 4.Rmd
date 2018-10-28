@@ -1,0 +1,28 @@
+---
+title: "Homework 4"
+author: "Jeanette Shekelle"
+date: "11/2/2018"
+output: html_document
+---
+
+
+### Problem 1: Create a website
+
+
+https://jshekelle.github.io/
+
+
+
+### Problem 2: Create a flexdashboard
+
+
+Loading libraries
+
+```{r}
+library(tidyverse)
+library(viridis)
+library(p8105.datasets)
+
+library(plotly)
+```
+
