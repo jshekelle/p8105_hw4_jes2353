@@ -49,15 +49,21 @@ nyc_food_inspect_smaller%>%
 ```
 
 
-### 
+### Plotly bar chart
 
 ```{r}
 nyc_food_inspect_smaller %>% 
   count(cuisine_description) %>% 
+  arrange(desc(n)) %>% 
+  head(20) %>% 
   mutate(cuisine_description = fct_reorder(cuisine_description, n)) %>% 
   plot_ly(x = ~cuisine_description, y = ~n, color = ~cuisine_description, type = "bar")
 
 ```
+
+
+Here we can see the distribution of the top 20 different cuisine types in NYC, from our random sample of 5000 restaurants. The vast majority of restuarants are American followed by Chinese. American food is the most common by a huge margin (more than twice as popular as the next most popular, Chinese).
+
 
 ```{r}
 scatter_ggplot = 
